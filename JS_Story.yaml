@@ -1,0 +1,6 @@
+In the earlier days there was no way to execute you javascript code other than browser. No matter what you are writing.
+So in every language we need some kind of compiler or interpreter and this software conveters the code into binary so the computer actually understand that.
+          But this was the missing peice this compiler or software which coverters my JavaScript
+          code is only avaliable in the browser. So that is the thing you couldn't do much in that.
+So after that some people try to take it out that v8 engine from the browser to execute the code so the guys came in and said 'hey' i'm goona make node.js.
+So nodeJS what they did is they took this v8 engine and say hey were goona allow you to it as a software that can interpriate your file as a javascript code.
