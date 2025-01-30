@@ -18,7 +18,6 @@ console.log(selectedTeas);
 
 let cities = ["London", "New York", "Paris", "Berlin"];
 let visitedCities = [];
-
 for (let e = 0; e < cities.length; e++) {
     if (cities[e] === 'Paris' || cities[e] === 'paris') {
         continue;
@@ -27,6 +26,22 @@ for (let e = 0; e < cities.length; e++) {
     visitedCities.push(cities[e]);
 }
 console.log(visitedCities);
+
+// pre increment
+// post increment
+/* for (let i = 0; i < cities.length; ++i) {
+    console.log(i);
+}
+
+while (i < 10) {
+    console.log("");
+    i++;
+}
+
+do {
+
+} while (condition); */
+
 
 
 /* 3. Use a `for-of` loop to iterate through the array `[1, 2, 3, 4, 5]` and stop when the number `4` is found.
