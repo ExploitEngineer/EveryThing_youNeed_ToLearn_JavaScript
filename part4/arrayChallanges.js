@@ -82,3 +82,14 @@ let cityBucketList = ["Kyoto", "London", "Cape Town", "Vancouver"];
 
 let isLondonInList = cityBucketList.includes("London");
 console.log(isLondonInList);
+
+
+// 11. Use shift and unshift method in arrays
+let shiftArray = [1, 2, 3, 4, 5];
+let newShiftArray = shiftArray.shift();
+console.log(shiftArray);
+
+
+let unshiftArray = [1, 2, 3, 4, 5];
+console.log(unshiftArray.unshift(6, 7));
+console.log(unshiftArray);
