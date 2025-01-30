@@ -47,12 +47,13 @@ Store the returned function in a variable named `teaMaker` and call it with `"gr
 
 
 
-function createTeaMaker() {
+function createTeaMaker(name) {
     return function (teaType) {
-        return `Making ${teaType};`
+        let score = 100;
+        return `Making ${teaType} ${name} ${score};`
     }
 }
 
-let teaMaker = createTeaMaker();
+let teaMaker = createTeaMaker("whoami");
 let result = teaMaker("green tea");
 console.log(result);
