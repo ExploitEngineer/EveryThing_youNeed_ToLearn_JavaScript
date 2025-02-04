@@ -40,4 +40,11 @@ document.getElementById("addNewItem").addEventListener('click', function () {
 document.getElementById("removeLastTask").addEventListener('click', function () {
     let taskList = document.getElementById("taskList");
     taskList.lastElementChild.remove();
-})
+});
+
+
+// INFO: Example 6
+
+document.getElementById("clickMeButton").addEventListener('click', function () {
+    alert("chaicode");
+});
