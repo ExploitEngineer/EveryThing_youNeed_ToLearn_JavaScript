@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // INFO: Example 1
 
 document.getElementById("changeTextButton").addEventListener("click", function () {
@@ -49,7 +48,7 @@ document.getElementById("removeLastTask").addEventListener('click', function () 
 document.getElementById("clickMeButton").addEventListener('click', function () {
     alert("chaicode");
 });
-=======
+
 // INFO: Example 1
 
 document.getElementById("changeTextButton").addEventListener("click", function () {
@@ -130,4 +129,3 @@ document.getElementById("toggleHighLight").addEventListener('click', function ()
     let descriptionText = document.getElementById("descriptionText");
     descriptionText.classList.toggle('highlight');
 });
->>>>>>> 0069fe80899d50dacef945e4c2b3b0830a0f14c1
