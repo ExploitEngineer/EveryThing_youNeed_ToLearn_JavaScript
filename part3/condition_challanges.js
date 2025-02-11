@@ -67,3 +67,34 @@ if (items.length === 0) {
 } else {
     console.log("Array is not empty");
 }
+
+
+// INFO: Switch & Case
+const dayNumber = 5;
+
+switch (dayNumber) {
+    case 0:
+        console.log("It is sunday Today");
+    case 1:
+        console.log("It is Monday Today..");
+    case 2:
+        console.log("It is Tuesday Today...");
+    case 3:
+        console.log("It is Wednesday Today..");
+    case 4:
+        console.log("It is Thursday Today..");
+    case 5:
+        console.log("It is Friday Today.");
+        break;
+    case 6:
+        console.log("It is Saturday Today");
+    default:
+        console.log("No days left");
+}
+
+// INFO: Ternary Operator
+dayNumber == 0 ? console.log("It is true...") : console.log("It is false...");
+
+const gender = "F";
+const userMessage = `${gender === "F" ? "She" : "He"} is a college student.`
+console.log(userMessage);
