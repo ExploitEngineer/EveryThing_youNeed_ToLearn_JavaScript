@@ -18,7 +18,7 @@ myscore++;
 let credits = 56;
 credits--;
 
-// Comparion Operation
+// Comparion Operators
 
 let num1 = 3;
 let num2 = 3;
