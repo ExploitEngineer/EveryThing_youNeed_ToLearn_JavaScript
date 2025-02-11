@@ -1,32 +1,29 @@
-let score = 102;
-let bonus = 25;
+// INFO: Operators in JavaScript
 
-let totalScore = score + bonus;
+// NOTE: Comparison Operators
+const user1 = 18;
+const user2 = 20;
+const user3 = '20';
+const newNum1 = 8;
+const newNum2 = 10;
+
+console.log(user1 == user2);
+console.log(user2 === user3);
+console.log(user1 != user2);
+console.log(user1 !== user2);
+console.log(newNum1 > newNum2);
+console.log(newNum1 < newNum2);
+console.log(newNum1 >= newNum2);
+console.log(newNum2 <= newNum2);
 
 
-let addition = 4 + 5;
-let subtract = 9 - 3;
-let multiplication = 3 * 5;
-let division = 2 / 4;
-let raminder = 9 % 2;
-let expo = 2 ** 4;
+// NOTE: Logical Operators
+/*
+&& (And)
+|| (Or)
+! (Not)
+*/
 
-let myscore = 110;
-myscore++;
-// ++myscore
-
-let credits = 56;
-credits--;
-
-// Comparion Operators
-
-let num1 = 3;
-let num2 = 3;
-let num3 = 6;
-
-console.log(num1 == num2); // true
-console.log(num1 != num3); // true
-console.log(num1 > num3); // true
-console.log(num1 < num3); // true
-console.log(num2 <= num3); // false
-console.log(num2 >= num3); //false
+console.log((5 < 7) && (4 < 8)); // if any one of the statment is false in (And) operator then the answer will bet false
+console.log((5 > 9) || (5 < 10)); // if any one of the statment is ture in (Or) operator then the answer will be true
+console.log(!true); // not operator converters the false into true and true into false
