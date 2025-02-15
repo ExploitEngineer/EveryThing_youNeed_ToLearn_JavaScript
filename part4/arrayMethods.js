@@ -89,3 +89,4 @@ const arr14 = [1, 2, 3, 4, 5];
 arr14.splice(2, 0, 6, 7);
 arr14.splice(2, 1, 8, 9);
 console.log(arr14);
+
