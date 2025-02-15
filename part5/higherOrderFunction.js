@@ -19,3 +19,4 @@ a(sayHi);  // if we passed the function in the function then it is and higher or
 a(function () {
     console.log('anonymous Function');
 });
+
