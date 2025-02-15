@@ -57,3 +57,23 @@ function createTeaMaker(name) {
 let teaMaker = createTeaMaker("whoami");
 let result = teaMaker("green tea");
 console.log(result);
+
+
+
+// NOTE: Functions in Detail
+
+function introduceMe(username = 'newEmployee', developer = 'Mechanical Engineer', age = 18) {
+    if (age === 18 && age >= 18) {
+        console.log("You'r eligible...");
+    } else {
+        console.log("You'r are not eligilbe....");
+    }
+    console.log("Hi");
+    console.log(`My name is ${username}.`);
+    console.log(`I am a Web ${developer}.`);
+    console.log(`My age is ${age}`)
+};
+introduceMe('Abdul Rafay', 'Cyber Security Engineer', 17);
+introduceMe('Zain', 'Android Developer', 17);
+introduceMe('Shiraz', 'Web Developer', 20);
+introduceMe();
