@@ -44,6 +44,23 @@ console.log(obj);
 console.log(obj3);
 
 
+const arr = ["whoami", "zain", "rafay"];
+
+const arr1 = [...arr];
+arr1.push("array1");
+
+const arr2 = [].concat(arr);
+arr2.push("array2");
+
+const arr3 = arr.slice();
+arr3.push("array3");
+
+console.log(arr);
+console.log(arr1);
+console.log(arr2);
+console.log(arr3);
+
+
 // FIXME: How to do a Deep Copy
 // INFO: There are two ways that i will gonna show you to do a deep copy
 const object1 = {
