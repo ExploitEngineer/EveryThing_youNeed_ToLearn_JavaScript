@@ -6,16 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
         body {
+            font-family: 'Courier New', Courier, monospace;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             background: black;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 80px;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+
+            a {
+                font-size: 1.2rem;
+                text-decoration: none;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <h1>OOP and Factory Functions</h1>
+    <h3>Four Pillars of Object Oriented Programming</h3>
+    <ul>
+        <li><a href="#">Encapsulation</a></li>
+        <li><a href="#">Abstraction</a></li>
+        <li><a href="#">Inheritance</a></li>
+        <li><a href="#">Polymorphism</a></li>
+    </ul>
 
-    <script src="api.js"></script>
+    <!-- <script src="api.js"></script> -->
+    <script src="oop.js"></script>
 </body>
 
 </html>
