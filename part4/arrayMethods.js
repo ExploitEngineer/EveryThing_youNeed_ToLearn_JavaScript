@@ -90,3 +90,72 @@ arr14.splice(2, 0, 6, 7);
 arr14.splice(2, 1, 8, 9);
 console.log(arr14);
 
+// Array Map Method
+const months = ['January', 'February', 'March', 'April', 'May'];
+const newMonths = months.map((elem, index, actualarr) => {
+    console.log(index += 1, elem);
+    console.log(actualarr);
+    return elem.toUpperCase();
+});
+
+
+// Array filter Method
+const lastMonths = ['June', 'July', 'August', 'September', 'October'];
+const newLastMonths = lastMonths.filter((elem, index, actualarr) => {
+    newLastMonths == lastMonths; // false
+    console.log(index, elem);
+    return lastMonths.includes('j');
+});
+
+
+const students = [
+    {
+        name: 'Abdul Rafay',
+        age: 17
+    },
+    {
+        name: 'Zain',
+        age: 16
+    },
+    {
+        name: 'Mubashir',
+        age: 20
+    },
+    {
+        name: 'Amir',
+        age: 18
+    }
+];
+
+const filteredStudents = students.filter((student) => {
+    return student.age >= 18;
+})
+
+const mapStudents = filteredStudents.map((student) => {
+    return student.name;
+})
+
+const filteredMaps = mapStudents.filter((student) => {
+    return student.includes('A');
+})
+
+// Array Reduce Method
+const numbers = [1, 1, 2, 1, 1, 1];
+numbers.reduce((accumulator, currentVal, index, actualarr) => {
+    console.log(accumulator);
+    return 'whoami';
+}, 10)
+
+
+// Array some method
+const evenNumbers = [0, 2, 4, 6, 8];
+const someResult = evenNumbers.some((elem, index, array) => {
+    return elem > 4; // if this some method finds any true value in the array then it will goona return true otherwise false
+})
+
+
+// Array Every Method
+const newNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const everyResult = newNumbers.every((elem) => {
+    return elem % 2 === 1; // if this founds any of the false value in the array this will gonna return false
+})
