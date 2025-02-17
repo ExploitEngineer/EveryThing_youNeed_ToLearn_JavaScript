@@ -10,7 +10,7 @@ console.log(color2);
 
 
 // const [, , color3] = colors;
-const {3: color3} = colors;
+const { 3: color3 } = colors;
 console.log(color3);
 
 
