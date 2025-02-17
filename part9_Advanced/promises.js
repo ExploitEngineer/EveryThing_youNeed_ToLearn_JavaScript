@@ -14,3 +14,29 @@ fetchData()
     })
     .then((value) => { console.log(value) })
     .catch((error) => { console.log(error) })
+
+
+
+const resolveBtn = document.getElementById("resolve-btn");
+const rejectBtn = document.getElementById("reject-btn");
+
+const promise = new Promise((resolve, reject) => {
+    resolveBtn.addEventListener('click', () => {
+        resolve('Promise Resolve');
+    })
+    rejectBtn.addEventListener('click', () => {
+        reject('Promise Rejected');
+    })
+});
+
+promise.then((data) => {
+    console.log(data);
+})
+promise.catch((error) => {
+    console.log(error);
+})
+promise.finally(() => {
+    console.log('Finally');
+})
+
+console.log(promise);
