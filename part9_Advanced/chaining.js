@@ -5,3 +5,5 @@ const user = {
 }
 console.log(user.address && user.address.city);
 console.log(user.address?.city);
+
+export { user as newUsers};
