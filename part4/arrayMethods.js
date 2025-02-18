@@ -159,3 +159,29 @@ const newNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const everyResult = newNumbers.every((elem) => {
     return elem % 2 === 1; // if this founds any of the false value in the array this will gonna return false
 })
+
+// Array find Method
+const people = [
+    {
+        name: 'Dom',
+        occupation: 'Software Developer'
+    },
+    {
+        name: 'Eric',
+        occupation: 'Dentist'
+    },
+    {
+        name: 'Kate',
+        occupation: 'Hair Dresser'
+    },
+    {
+        name: 'Sophia',
+        occupation: 'Dentist'
+    }
+];
+
+function isDentist(person) {
+    return person.occupation === 'Dentist'
+}
+
+console.log(people.find(isDentist).name)
