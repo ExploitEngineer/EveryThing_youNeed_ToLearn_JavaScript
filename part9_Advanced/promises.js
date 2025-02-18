@@ -16,7 +16,6 @@ fetchData()
     .catch((error) => { console.log(error) })
 
 
-
 const resolveBtn = document.getElementById("resolve-btn");
 const rejectBtn = document.getElementById("reject-btn");
 
@@ -40,3 +39,24 @@ promise.finally(() => {
 })
 
 console.log(promise);
+
+
+const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+
+    }, 5000);
+
+    resolveBtn.addEventListener('click', () => {
+        resolve('My promise is resolved');
+    });
+
+    rejectBtn.addEventListener('click', () => {
+        reject('My promise is rejected');
+    })
+});
+myPromise.then((data) => {
+    console.log(`then statement run ${data}`);
+}).catch((error) => {
+    console.log(`error fetching data ${error}`);
+})
+console.log(myPromise);

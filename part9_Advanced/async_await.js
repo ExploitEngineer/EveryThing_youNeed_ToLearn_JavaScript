@@ -20,7 +20,8 @@ newRequest();
 
 async function request() {
     const url = 'https://dummyjson.com/products';
-    const response = await fetch(url)
-    console.log(response);
+    const response = await fetch(url) // await returns the response of the fetched url means the result
+    const data = response.json()
+    console.log(data);
 }
 request();
