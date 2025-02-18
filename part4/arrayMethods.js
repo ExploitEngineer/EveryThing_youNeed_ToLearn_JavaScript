@@ -206,3 +206,16 @@ function isDentist(person) {
 }
 
 console.log(people.find(isDentist).name)
+
+
+const myProducts = [
+    { laptop: "lenovo", mobile: "google", price: 499 },
+    { laptop: "dell", mobile: "iphone", price: 699 },
+    { laptop: "acer", mobile: "google", price: 450 }
+];
+
+const findProducts = myProducts.find((elem) => {
+    return elem.mobile === "google";
+})
+
+console.log(findProducts);
