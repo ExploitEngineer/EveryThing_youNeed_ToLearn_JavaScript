@@ -98,6 +98,13 @@ const newMonths = months.map((elem, index, actualarr) => {
     return elem.toUpperCase();
 });
 
+const prices = [4, 8, 9, 10, 12];
+const newPrices = prices.map((price, i, arr) => {
+    return price * 0.5;
+})
+
+console.log(newPrices);
+
 
 // Array filter Method
 const lastMonths = ['June', 'July', 'August', 'September', 'October'];
@@ -138,6 +145,20 @@ const mapStudents = filteredStudents.map((student) => {
 const filteredMaps = mapStudents.filter((student) => {
     return student.includes('A');
 })
+
+const products = [
+    { name: "Laptop", price: 499, color: "white" },
+    { name: "SmartPhone", price: 899, color: "black" },
+    { name: "Headphones", price: 50, color: "white" },
+    { name: "Tablet", price: 199, color: "grey" },
+    { name: "keyboard", price: 210, color: "blue" }
+];
+
+const affordableproducts = products.filter((product) => {
+    return product.price < 200;
+})
+
+console.log(affordableproducts);
 
 // Array Reduce Method
 const numbers = [1, 1, 2, 1, 1, 1];
