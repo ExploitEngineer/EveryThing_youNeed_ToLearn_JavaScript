@@ -45,3 +45,37 @@ function Drink(name) {
 }
 let tea = new Drink("tea");
 let coffee = Drink("coffee");
+
+
+// INFO: This Keyword in JavaScript
+
+// this in global space
+console.log(this);  // globalObject
+
+// this inside a function
+function a() {
+    // the value depends on strict / non strict mode
+    console.log(this);
+}
+a(); // undefined
+
+// this keyword value depends on how this is called (window)
+window.a(); // window Object
+
+// this inside a object's method
+const student = {
+    name: "Abdul Rafay",
+    age: 17,
+    printName: function () {
+        console.log(this);
+    },
+};
+student.printName();
+
+
+const student2 = {
+    name: "dipika",
+};
+
+student.printName.call(student2);
+// call apply bind methods (sharing methods)
