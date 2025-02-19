@@ -78,4 +78,28 @@ const student2 = {
 };
 
 student.printName.call(student2);
-// call apply bind methods (sharing methods)
+
+//  this inside arrow function
+const obj = {
+    a: 10,
+    x: () => {
+        console.log(this);
+    }
+};
+obj.x();
+
+
+// this inside nested arrow function
+const obj4 = {
+    a: 10,
+    x: function () {
+        // enclosing lexical context
+        const y = () => {
+            console.log(this);
+        };
+        y();
+        console.log(this);
+    }
+};
+obj4.x();
+
