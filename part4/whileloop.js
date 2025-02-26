@@ -25,3 +25,39 @@ while (i < arr.length) {
     console.log(arr[i]);
     i++;
 };
+
+
+
+
+// NOTE: While Loop Quiz 
+
+// INFO: First Quiz 
+let i = 1;
+while(i <= 3) {
+    console.log(i);
+    i++;
+} // Answer : 1 2 3
+
+
+// INFO: Second Quiz 
+let x = 5;
+while(x > 0) {
+    console.log("Loop running");
+} // Answer : infinite
+
+
+// INFO: Third Quiz 
+let count = 0;
+while(count < 5) {
+    console.log(count);
+    count += 2;
+} // Answer : 0 2 4
+
+
+// INFO: Fourth Quiz 
+let i = 10;
+while(i > 5) {
+    console.log(i);
+    i--;
+} // Answer : 10 9 8 7 6 
+
