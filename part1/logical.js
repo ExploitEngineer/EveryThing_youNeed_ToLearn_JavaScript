@@ -1,6 +1,6 @@
-// && -> and
-// || -> or
-// ! -> reverse
+// && -> logical and
+// || -> logical or
+// ! -> logical not 
 
 let isLoggedin = true;
 let ispaid = false;
