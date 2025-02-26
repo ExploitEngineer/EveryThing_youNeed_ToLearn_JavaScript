@@ -81,14 +81,18 @@ console.log(arr19.sort());
 
 // Array slice Method
 const arr13 = [1, 2, 3, 4, 5];
-const newarr13 = arr13.slice(1, 3);
+const newarr13 = arr13.slice(1, 3); // [2, 3]
+const newarr20 = arr13.slice(1); // [2, 3, 4, 5]
 console.log(newarr13);
 
-// Array splice Method
+// Array splice Method splice(index, howmany, "new value", Delete) changes in the exesting array
 const arr14 = [1, 2, 3, 4, 5];
 arr14.splice(2, 0, 6, 7);
 arr14.splice(2, 1, 8, 9);
 console.log(arr14);
+
+const array = ["Abdul Rafay", "Zain", "rehan", "mubashir"];
+array.splice(2, 0, "Neha", "Karan");
 
 // Array Map Method
 const months = ['January', 'February', 'March', 'April', 'May'];
@@ -165,7 +169,7 @@ const numbers = [1, 1, 2, 1, 1, 1];
 numbers.reduce((accumulator, currentVal, index, actualarr) => {
     console.log(accumulator);
     return 'whoami';
-}, 10)
+}, 10);
 
 
 // Array some method
@@ -219,3 +223,15 @@ const findProducts = myProducts.find((elem) => {
 })
 
 console.log(findProducts);
+
+
+
+// NOTE: Final summary Table for (find, filter, reduce, forEach, map)
+/* 
+Method        Creates a New Array?        Returns a Single Value?                Original Array Modified?
+.map()        ✅ Yes	                  ✅ Yes (returns a new array)	         ❌ No
+.filter()     ✅ Yes	                  ✅ Yes (returns a new array)           ❌ No
+.reduce()     ❌ No	                      ✅ Yes (returns a single value)	     ❌ No
+.find()	      ❌ No	                      ✅ Yes (returns a single element)	     ❌ No
+.forEach()    ❌ No	                      ❌ No (returns undefined)	             ✅ Yes (can modify original array)
+*/
