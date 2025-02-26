@@ -60,3 +60,19 @@ myPromise.then((data) => {
     console.log(`error fetching data ${error}`);
 })
 console.log(myPromise);
+
+
+// Creating another promise
+const p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Promise resolved");
+    }, 4000);
+})
+
+p.then(() => {
+    console.log('data fetched successfully');
+}).catch(() => {
+    console.log("Error fetching data");
+}).finally(() => {
+    console.log("Program completed");
+})
