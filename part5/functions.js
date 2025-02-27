@@ -77,3 +77,45 @@ introduceMe('Abdul Rafay', 'Cyber Security Engineer', 17);
 introduceMe('Zain', 'Android Developer', 17);
 introduceMe('Shiraz', 'Web Developer', 20);
 introduceMe();
+
+
+
+// NOTE: Functions Quizes 
+
+// INFO: First Quiz 
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+console.log(greet("Alice")); // Answer : Hello, Alice!
+
+
+// INFO: Second Quiz 
+function test() {
+    let x = 5;
+}
+console.log(test()); // Answer : undefined
+
+
+// INFO: Third Quiz 
+console.log(myFunction());
+
+function myFunction() {
+    return "Hello!";
+}
+
+
+// INFO: Fourth Quiz 
+function sum(a, b) {
+    return a + b;
+}
+console.log(sum(3)); // Answer : NAN
+
+
+// INFO: Fifth Quiz 
+function multiply(a, b = 2) {
+    return a * b;
+}
+console.log(multiply(5)); // Answer : 10
+
+
+// INFO: Sixth Quiz 
