@@ -20,3 +20,29 @@ a(function () {
     console.log('anonymous Function');
 });
 
+
+
+
+// NOTE: Higher Order Functions Quizes
+
+// INFO: First Quiz 
+function greet(callback) {
+    console.log("Hello!");
+    callback();
+}
+
+greet(function() {
+    console.log("Goodbye!");
+}) // Answer : Hello!   Goodbye!
+
+
+// INFO: Second Quiz
+function makeMultiplier(num) {
+    return function(x) {
+        return x * num;
+    }
+}
+
+const triple = makeMultiplier(3);
+console.log(triple(4)); // Answer : 12
+
