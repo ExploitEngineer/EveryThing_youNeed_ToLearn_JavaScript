@@ -61,3 +61,8 @@ catch catches errors if something goes wrong.
 6️⃣ Fetch API – "Getting Data from the Internet"
 The Fetch API is used to get data from an API (like a website or database).
 It returns a promise, so we use .then() or async/await.
+
+
+
+7️⃣ Chaining Promises & API Calls – "Running Multiple Promises in Order"
+Sometimes, we need multiple API calls to happen one after another. We do this by chaining promises.
