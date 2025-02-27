@@ -25,3 +25,20 @@ const random = () => Math.random()
 setTimeout(() => {
     console.log("hi");
 }, 2000);
+
+
+// NOTE: Arrow Functions
+
+// INFO: First Quiz 
+const sum = (a, b) => a + b;
+console.log(sum(3, 7)) // Answer : 10
+
+
+// INFO: Second Quiz 
+const person = {
+    name: "John",
+    greet: () => {
+        console.log(`Hello, ${this.name}`)
+    }
+};
+person.greet(); // Answer : Hello undefined
