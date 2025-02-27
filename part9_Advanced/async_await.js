@@ -1,3 +1,6 @@
+// NOTE: An aysnc function is a special type of function that always returns a Promise. It allows to write asynchronous code in a cleaner, more readable way using await intead of .then() chains 
+
+
 async function makeRequest() {
     console.log('helo');
     throw new Error('error in program');
