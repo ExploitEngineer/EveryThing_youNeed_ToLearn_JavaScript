@@ -1,0 +1,63 @@
+1️⃣ Synchronous vs. Asynchronous JavaScript (Basic Concept)
+🔹 Synchronous: Code executes line by line, blocking further execution until a task completes.
+🔹 Asynchronous: Code does not wait, allowing other tasks to continue while waiting for an operation to finish.
+
+
+
+1️⃣ What is the Event Loop?
+The Event Loop is what allows JavaScript to handle asynchronous operations without blocking execution. It enables JavaScript to run single-threaded, yet still perform non-blocking I/O operations, like handling API requests, setTimeout, and user interactions.
+
+
+
+Call Stack
+JavaScript uses a Call Stack to keep track of function execution.
+
+When a function is called, it's added to the stack.
+When a function completes, it's removed from the stack.
+If a function calls another function, the new function is added on top of the stack.
+
+
+
+1️⃣ Callbacks
+What is a Callback Function?
+A callback function is a function passed as an argument to another function and executed later.
+
+
+
+2️⃣ Closures
+What is a Closure?
+A closure is a function that remembers the variables from its outer scope even after the outer function has finished executing.
+
+
+
+3️⃣ Callback vs. Closure: The Difference
+Feature	        Callback	                                                       Closure
+Definition	    Function passed as an argument to another function	             Function that retains access to outer variables
+Use Case	      Asynchronous tasks (e.g., API calls, event listeners)	           Data persistence, encapsulation
+Execution	      Runs later when an event occurs	                                 Self-contained and executed when called
+Example	        setTimeout(callback, 1000)	                                     function inner() { console.log(outerVar) }
+
+
+
+3️⃣ Promises – "A Promise is Like a Real-Life Promise!"
+A promise is something that will complete in the future. It can either:
+✅ Resolve (success) → We get the result.
+❌ Reject (fail) → We get an error.
+
+
+
+4️⃣ Async/Await – "Easier Way to Handle Promises!"
+✅ async makes a function return a promise.
+✅ await pauses execution until the promise is resolved.
+
+
+
+5️⃣ Try & Catch – "Handling Errors Gracefully"
+try runs the code.
+catch catches errors if something goes wrong.
+
+
+
+6️⃣ Fetch API – "Getting Data from the Internet"
+The Fetch API is used to get data from an API (like a website or database).
+It returns a promise, so we use .then() or async/await.
