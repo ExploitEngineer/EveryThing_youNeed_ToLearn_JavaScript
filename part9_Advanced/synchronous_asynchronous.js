@@ -28,3 +28,12 @@ setTimeout(() => console.log("3"), 500);
 console.log("4"); // Answer : 1 4 3 2
 
 
+// INFO: Third Quiz 
+console.log("Start");
+setTimeout(() => {
+    console.log("Middle")
+}, 0);
+console.log("End"); // Start End Middle
+
+
+// INFO: 
