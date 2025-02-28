@@ -10,3 +10,8 @@ let increment = outer();
 console.log(increment());
 console.log(increment());
 console.log(increment());
+
+
+// NOTE: Clouser Quizes 
+
+// INFO: First Quiz 
