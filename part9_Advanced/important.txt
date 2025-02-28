@@ -1,6 +1,15 @@
 1️⃣ Synchronous vs. Asynchronous JavaScript (Basic Concept)
-🔹 Synchronous: Code executes line by line, blocking further execution until a task completes.
-🔹 Asynchronous: Code does not wait, allowing other tasks to continue while waiting for an operation to finish.
+
+🔹 Synchronous JavaScript (One by One Execution)
+Code runs line by line, in order.
+Each task must finish before the next one starts.
+Blocking execution (if one task takes time, everything else stops and waits).
+
+🔹 Asynchronous JavaScript (Non-Blocking Execution)
+Code does NOT wait for a task to finish before moving to the next.
+Faster because other tasks can continue while waiting.
+Uses callbacks, promises, async/await to handle tasks that take time (like API calls, file reading, timers).
+
 
 
 
