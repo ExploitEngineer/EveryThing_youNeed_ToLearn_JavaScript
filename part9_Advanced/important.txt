@@ -13,12 +13,41 @@ Uses callbacks, promises, async/await to handle tasks that take time (like API c
 
 
 
-1️⃣ What is the Event Loop?
-The Event Loop is what allows JavaScript to handle asynchronous operations without blocking execution. It enables JavaScript to run single-threaded, yet still perform non-blocking I/O operations, like handling API requests, setTimeout, and user interactions.
+2️⃣ What is the Event Loop?
+JavaScript is single-threaded, meaning it can only do one task at a time. However, it can still handle asynchronous operations (like API calls, setTimeout, etc.) without blocking execution.
+1️⃣ JavaScript starts executing code line by line (this is called the Call Stack).
+2️⃣ If there's a synchronous task, it runs immediately in the Call Stack.
+3️⃣ If there's an asynchronous task (like setTimeout, API calls, event listeners), it is sent to the Web APIs (like the browser).
+4️⃣ Once the asynchronous task is done, it moves to the Callback Queue (or Microtask Queue, depending on the task).
+5️⃣ The Event Loop checks if the Call Stack is empty. If yes, it takes the first task from the queue and puts it in the Call Stack to execute.
+
+📌 In simple words: JavaScript keeps checking for pending tasks (from APIs, timers, promises) and executes them when the Call Stack is free.
 
 
 
-Call Stack
+Example of Event loop 
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Inside setTimeout");
+}, 0);
+
+console.log("End");
+
+📌 Execution Order (Step-by-Step)
+1️⃣ "Start" is logged immediately (Call Stack).
+2️⃣ setTimeout is sent to the Web API with a 0ms delay.
+3️⃣ "End" is logged immediately because JavaScript doesn’t wait.
+4️⃣ The Event Loop sees the Call Stack is empty, so it moves "Inside setTimeout" from the queue to the stack.
+5️⃣ "Inside setTimeout" is logged last.
+
+
+
+
+
+
+3️⃣Call Stack
+JavaScript starts executing code line by line (this is called the Call Stack).
 JavaScript uses a Call Stack to keep track of function execution.
 
 When a function is called, it's added to the stack.
@@ -27,13 +56,13 @@ If a function calls another function, the new function is added on top of the st
 
 
 
-1️⃣ Callbacks
+4️⃣ Callbacks
 What is a Callback Function?
 A callback function is a function passed as an argument to another function and executed later.
 
 
 
-2️⃣ Closures
+5️⃣ Closures
 What is a Closure?
 A closure is a function that remembers the variables from its outer scope even after the outer function has finished executing.
 
@@ -48,14 +77,14 @@ Example	        setTimeout(callback, 1000)	                                     
 
 
 
-3️⃣ Promises – "A Promise is Like a Real-Life Promise!"
+6️⃣ Promises – "A Promise is Like a Real-Life Promise!"
 A promise is something that will complete in the future. It can either:
 ✅ Resolve (success) → We get the result.
 ❌ Reject (fail) → We get an error.
 
 
 
-4️⃣ Async/Await – "Easier Way to Handle Promises!"
+7️⃣ Async/Await – "Easier Way to Handle Promises!"
 ✅ async makes a function return a promise.
 ✅ await pauses execution until the promise is resolved.
 
