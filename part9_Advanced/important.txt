@@ -45,7 +45,6 @@ console.log("End");
 
 
 
-
 3️⃣Call Stack
 JavaScript starts executing code line by line (this is called the Call Stack).
 JavaScript uses a Call Stack to keep track of function execution.
