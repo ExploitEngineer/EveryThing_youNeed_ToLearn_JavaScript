@@ -28,3 +28,25 @@ async function request() {
     console.log(data);
 }
 request();
+
+
+// NOTE: Async await Quizes 
+
+// INFO: First quiz 
+async function test() {
+    return "Hello";
+}
+console.log(test()); // Answer : Promise { <fulfilled>: "Hello" }
+
+
+// INFO: Second Quiz 
+async function fetchData() {
+    console.log("start");
+    let promise = new Promise(resolve => setTimeout(() => resolve("Data loaded"), 2000));
+    console.log("waiting....");
+    let data = await promise;
+    console.log(data);
+}
+
+fetchData();
+console.log("End"); // Answer :  start   waiting...   End    Data loaded
