@@ -76,3 +76,27 @@ p.then(() => {
 }).finally(() => {
     console.log("Program completed");
 })
+
+
+// NOTE: Promises Quizes 
+
+// INFO: First Quiz 
+let promise = new Promise((resolve, reject) => {
+    resolve("Success!");
+});
+
+promise.then((result) => {
+    console.log(result);
+}) // Answer : Success!
+
+
+// INFO: Second Quiz 
+let promise = new Promise((resolve, reject) => {
+    reject("Something went wrong");
+});
+promise.catch((error) => {
+    console.log(error);
+}) // Answer : Something went wrong
+
+
+// INFO: Third Quiz 
