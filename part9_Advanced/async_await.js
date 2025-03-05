@@ -30,6 +30,22 @@ async function request() {
 request();
 
 
+
+// Best way to handle api using async function 
+async function fetchData(url) {
+    try {
+        let response = await fetch(url);
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+fetchData("https://fakestoreapi.com/products");
+
+
+
 // NOTE: Async await Quizes 
 
 // INFO: First quiz 
