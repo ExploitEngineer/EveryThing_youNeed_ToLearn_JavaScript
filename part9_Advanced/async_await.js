@@ -45,6 +45,27 @@ async function fetchData(url) {
 fetchData("https://fakestoreapi.com/products");
 
 
+// THis one is also the best way to use async & await
+async function getProducts() {
+    try {
+        const url = 'https://dummyjson.com/products';
+        const res = await fetch(url);
+
+        if (!res.ok) {
+            throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+
+        const data = await res.json();
+        console.log(data);
+    } catch (error) {
+        console.error("Error fetching products:", error.message);
+    }
+}
+
+getProducts();
+
+
+
 
 // NOTE: Async await Quizes 
 
