@@ -1,4 +1,4 @@
-// NOTE: An aysnc function is a special type of function that always returns a Promise. It allows to write asynchronous code in a cleaner, more readable way using await intead of .then() chains 
+// NOTE: An aysnc function is a special type of function that always returns a Promise. It allows to write asynchronous code in a cleaner, more readable way using await intead of .then() chains
 
 
 async function makeRequest() {
@@ -31,7 +31,7 @@ request();
 
 
 
-// Best way to handle api using async function 
+// Best way to handle api using async function
 async function fetchData(url) {
     try {
         let response = await fetch(url);
@@ -61,22 +61,34 @@ async function getProducts() {
         console.error("Error fetching products:", error.message);
     }
 }
-
 getProducts();
 
+async function getCarts() {
+    try {
+        const url = 'https://dummyjson.com/carts';
+        const res = await fetch(url);
+        if (!res.ok) {
+            throw new Error(`Http error! Statu: ${res.status}`);
+        }
+        const data = await res.json();
+        console.log(data);
+    } catch (error) {
+        console.log("Error Feching carts", error.message);
+    }
+}
+getCarts();
 
 
+// NOTE: Async await Quizes
 
-// NOTE: Async await Quizes 
-
-// INFO: First quiz 
+// INFO: First quiz
 async function test() {
     return "Hello";
 }
 console.log(test()); // Answer : Promise { <fulfilled>: "Hello" }
 
 
-// INFO: Second Quiz 
+// INFO: Second Quiz
 async function fetchData() {
     console.log("start");
     let promise = new Promise(resolve => setTimeout(() => resolve("Data loaded"), 2000));
