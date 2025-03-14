@@ -81,15 +81,15 @@ console.log(typeof y) // undefined
 
 
 // INFO: What will be the output of the following code ?
-console.log([] + []);
-console.log([] + {});
-console.log({} + []);
+console.log([] + []); // ""
+console.log([] + {}); // [object object]
+console.log({} + []); // [object object]
 
 
 // INFO: What is the difference between these two?
 let main = 0;
 let actual = new Number(0);
-console.log(main == actual); // false 
+console.log(main == actual); // false
 console.log(main === actual); // true
 
 
