@@ -51,4 +51,36 @@ console.log(freezeObject.new = 21);
 console.log(freezeObject);
 
 // NOTE: (in) keyword in object
-console.log("name" in freezeObject); // this is how we can check that the key is exists in object or not  // NOTE: we have to pass the key as string. 
+console.log("name" in freezeObject); // this is how we can check that the key is exists in object or not  // NOTE: we have to pass the key as string.
+
+
+// Object Literal Syntax
+const person = {
+    name: "Alice",
+    age: 25,
+    greet: function() {
+        console.log("Hello, I'm " + this.name);
+    }
+};
+
+// Accessing Properties
+console.log(person.name); // Alice
+console.log(person['age']); // 25
+person.greet(); // Hello, I'm Alice
+console.log('name' in person); // true
+console.log(person.hasOwnProperty('age')); // true
+
+
+// Object Destructing
+const user = {
+    name: "Bob",
+    age: 30,
+    job: "Developer"
+};
+const {name, age, job: newJob} = user;
+console.log(name); // Bob
+console.log(age); // 30
+console.log(newJob); // Developer
+
+
+

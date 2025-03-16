@@ -80,23 +80,23 @@ introduceMe();
 
 
 
-// NOTE: Functions Quizes 
+// NOTE: Functions Quizes
 
-// INFO: First Quiz 
+// INFO: First Quiz
 function greet(name) {
     return "Hello, " + name + "!";
 }
 console.log(greet("Alice")); // Answer : Hello, Alice!
 
 
-// INFO: Second Quiz 
+// INFO: Second Quiz
 function test() {
     let x = 5;
 }
 console.log(test()); // Answer : undefined
 
 
-// INFO: Third Quiz 
+// INFO: Third Quiz
 console.log(myFunction());
 
 function myFunction() {
@@ -104,18 +104,85 @@ function myFunction() {
 }
 
 
-// INFO: Fourth Quiz 
+// INFO: Fourth Quiz
 function sum(a, b) {
     return a + b;
 }
 console.log(sum(3)); // Answer : NAN
 
 
-// INFO: Fifth Quiz 
+// INFO: Fifth Quiz
 function multiply(a, b = 2) {
     return a * b;
 }
 console.log(multiply(5)); // Answer : 10
 
 
-// INFO: Sixth Quiz 
+// INFO: Sixth Quiz
+function createGreeting(name) {
+    return function () {
+        console.log('Hello ' + name);
+    };
+}
+const greetJohn = createGreeting("John");
+greetJohn(); // Hello, John
+
+
+// INFO: Seventh Quiz
+function counter() {
+    let count = 0;
+
+    return function () {
+        count++;
+        return count;
+    };
+}
+const myCounter = counter();
+console.log(myCounter());
+console.log(myCounter());
+console.log(myCounter()); // 123
+
+
+// INFO: Eight Quiz
+function outer() {
+    let x = 10;
+    function inner() {
+        x++;
+        console.log(x);
+    }
+    return inner;
+}
+const myFunc = outer();
+myFunc();
+myFunc(); // 11, 12
+
+// INFO: Ningth Quiz
+function createAdder(x) {
+    return function (y) {
+        return x + y;
+    }
+}
+const add5 = createAdder(5);
+const add10 = createAdder(10);
+
+console.log(add5(2));
+console.log(add10(2)); // 7 12
+
+
+// INFO: Tenth Quiz
+function secretHolder() {
+    let secret = "I am hidden:";
+
+    return {
+        getSecret: function () {
+            return secret;
+        },
+        setSecret: function (newSecret) {
+            secret = newSecret;
+        }
+    };
+}
+const obj = secretHolder();
+console.log(obj.getSecret());
+obj.setSecret("New secret revealed!");
+console.log(obj.getSecret()); // I am hidden: | New secret revealed!
