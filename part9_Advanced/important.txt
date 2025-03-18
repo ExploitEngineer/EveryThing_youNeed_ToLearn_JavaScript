@@ -25,7 +25,7 @@ JavaScript is single-threaded, meaning it can only do one task at a time. Howeve
 
 
 
-Example of Event loop 
+Example of Event loop
 console.log("Start");
 
 setTimeout(() => {
@@ -63,7 +63,7 @@ A callback function is a function passed as an argument to another function and 
 
 5️⃣ Closures
 What is a Closure?
-A closure is a function that remembers the variables from its outer scope even after the outer function has finished executing.
+A closure is a function that remembers the variables from its outer scope even after the outer function has finished executing. - In simple ways that the child function access the values of parent function even after executing the parent function.
 
 
 
@@ -103,3 +103,27 @@ It returns a promise, so we use .then() or async/await.
 
 7️⃣ Chaining Promises & API Calls – "Running Multiple Promises in Order"
 Sometimes, we need multiple API calls to happen one after another. We do this by chaining promises.
+
+
+
+
+What is call by value and call by reference ?
+call by value is used for the primitive data types in js like (boolean, string, number) & call by reference is used for non primitive data types like functions, objects & Arrays.
+
+Example of Call by value:
+let x = 12;
+x = y;
+x = 15;
+console.log(x, y); Anwer: 15, 12
+
+Example of Call by reference:
+let obj1 = {
+    name: "whoami",
+    rollno: 12;
+}
+let obj2 = obj1;
+
+obj2.rollno = 1;
+
+console.log("obj1:", obj1); // Answer: name: whoami rollno: 1
+console.log("obj2:", obj2); // Answer: name: whoami rollno: 1
