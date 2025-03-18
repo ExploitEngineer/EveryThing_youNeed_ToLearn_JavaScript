@@ -149,3 +149,29 @@ class User {
 const user1 = new User('Alice', 'mypassword');
 console.log(user1.getEncryptedPassword()); // drowssapym
 
+
+/*
+🔥 Summary of Important Things to Remember:
+Classes are templates for creating objects.
+Encapsulation protects data by hiding it within classes.
+Inheritance allows extending classes to avoid repetition.
+Polymorphism allows overriding methods for different behaviors.
+Abstraction simplifies usage by hiding complex details.
+Getters & Setters provide controlled access to properties.
+*/
+
+
+// INFO: First Quiz
+class Car {
+    constructor(brand, model) {
+        this.brand = brand;
+        this.model = model;
+    };
+
+    displayInfo() {
+        console.log(`Brand: [${this.brand}], Model: [${this.model}]`)
+    };
+}
+
+const car = new Car('Toyota', 'Coralla');
+car.displayInfo(); // Brand: [Toyota], Model: [Coralla]
