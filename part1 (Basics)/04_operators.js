@@ -7,11 +7,11 @@ const user3 = '20';
 const newNum1 = 8;
 const newNum2 = 10;
 
-console.log(user1 == user2);
-console.log(user2 === user3);
-console.log(user1 != user2);
-console.log(user1 !== user2);
-console.log(newNum1 > newNum2);
+console.log(user1 == user2); 
+console.log(user2 === user3); 
+console.log(user1 != user2);  
+console.log(user1 !== user2);  
+console.log(newNum1 > newNum2); 
 console.log(newNum1 < newNum2);
 console.log(newNum1 >= newNum2);
 console.log(newNum2 <= newNum2);
