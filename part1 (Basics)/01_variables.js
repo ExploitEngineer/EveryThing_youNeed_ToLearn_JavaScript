@@ -1,10 +1,13 @@
 // using let (recommended for changeable values)
 let age = 20; // Declared and initialized with value 20
+age = 30;
+
 
 // using const (recommended for constant values)
 const pi = 3.14; // Declared and initialized. Value can't be changed.
 
-// using var (old way, Avoid using it)
+
+// using var (old way, Avoid using it), var also add itself to the window object
 var name = "John";
 
 
@@ -15,7 +18,7 @@ let a = 10;
 let b = 10;
 console.log(a == b); // true
 console.log(a === b); // false
-
+let age = 40;
 
 // INFO: Second Quiz
 let x = 3;

@@ -6,7 +6,7 @@ Takes an optional radix parameter (base of the number system, 2-36)
 Stops parsing at the first non-numeric character
 Best for extracting numbers from text or converting string numbers with specific bases
 */
-console.log(parseInt("42px"));      // 42  (ignores "px")
+console.log(parseInt("42px"));      // 42  (ignores "px")Page
 console.log(parseInt("3.14"));      // 3   (ignores decimal part)
 console.log(parseInt("0xFF", 16));  // 255 (hexadecimal)
 console.log(parseInt("111", 2));    // 7   (binary)

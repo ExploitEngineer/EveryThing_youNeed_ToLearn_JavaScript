@@ -116,5 +116,3 @@ promise.catch((error) => {
     console.log(error);
 }) // Answer : Something went wrong
 
-
-// INFO: Third Quiz 
