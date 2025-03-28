@@ -11,14 +11,14 @@ const pi = 3.14; // Declared and initialized. Value can't be changed.
 var name = "John";
 
 
+
 // NOTE: Quiz Time
 
 // INFO: First Quiz
 let a = 10;
 let b = 10;
 console.log(a == b); // true
-console.log(a === b); // false
-let age = 40;
+console.log(a === b); // true
 
 // INFO: Second Quiz
 let x = 3;
