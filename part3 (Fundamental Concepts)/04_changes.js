@@ -6,6 +6,6 @@ console.log(gameName);
 
 const username = "whoami"
 
-username = "dsnake0"
+username = "anonymous"
 
 console.log(username);

@@ -1,4 +1,4 @@
-// INFO: Function inside an object is method 
+// INFO: Function inside an object is method
 
 const person = {
     firstName: "Abdul",
