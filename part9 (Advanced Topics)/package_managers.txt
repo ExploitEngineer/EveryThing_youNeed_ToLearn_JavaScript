@@ -1,0 +1,30 @@
+Comparison Chart
+
+Feature | NPM | YARN | PNPM | BUN
+Speed | Slow | Faster | Very Fast | Blazing Fast 🚀
+Disk Usage | High | Medium | Low (efficient) | Low
+Default with | Node.js | Manual install | Manual install | Manual install
+Lock File | package-lock.json | yarn.lock | pnpm-lock.yaml | bun.lockb
+Recommended for | Default use, safe | Mid-level projects | Pro & big projects | Super fast experiments, modern projects
+
+
+
+
+# Yarn
+npm install -g yarn
+
+# PNPM
+npm install -g pnpm
+
+# Bun
+curl -fsSL https://bun.sh/install | bash
+
+
+
+
+Task | NPM | Yarn | PNPM | Bun
+Install deps | npm install | yarn install | pnpm install | bun install
+Add a package | npm install axios | yarn add axios | pnpm add axios | bun add axios
+Remove a package | npm uninstall | yarn remove | pnpm remove | bun remove
+Run scripts | npm run dev | yarn dev | pnpm dev | bun run dev
+Install devDependencies | npm install -D | yarn add -D | pnpm add -D | bun add -d
