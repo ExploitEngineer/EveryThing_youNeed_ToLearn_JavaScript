@@ -12,15 +12,15 @@ var name = "John";
 
 
 
-// NOTE: Quiz Time
+// NOTE: Quizzez Time
 
-// INFO: First Quiz
+// INFO: First Quizz
 let a = 10;
 let b = 10;
 console.log(a == b); // true
 console.log(a === b); // true
 
-// INFO: Second Quiz
+// INFO: Second Quizz
 let x = 3;
 console.log(x++); // 3
 console.log(++x); // 4
@@ -42,7 +42,7 @@ console.log(typeof null); // object
 let c = 10;
 let e = c++;
 let d = ++c;
-console.log(a, b, c); // 12, 10, 11
+console.log(c, e, d); // 12, 10, 11
 
 
 // INFO: What will be the output of the following code ?

@@ -58,7 +58,7 @@ console.log("name" in freezeObject); // this is how we can check that the key is
 const person = {
     name: "Alice",
     age: 25,
-    greet: function() {
+    greet: function () {
         console.log("Hello, I'm " + this.name);
     }
 };
@@ -77,10 +77,7 @@ const user = {
     age: 30,
     job: "Developer"
 };
-const {name, age, job: newJob} = user;
+const { name, age, job: newJob } = user;
 console.log(name); // Bob
 console.log(age); // 30
 console.log(newJob); // Developer
-
-
-

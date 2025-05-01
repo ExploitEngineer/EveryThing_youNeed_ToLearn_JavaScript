@@ -197,3 +197,31 @@ function deepClone(obj) {
 
 const original = { /* complex object */ };
 const copy = deepClone(original);
+
+
+// Date function in js
+const date = new Date();
+console.log(date.getFullYear());   // e.g., 2025
+console.log(date.getMonth());      // e.g., 3 (April) – months are 0-indexed (0 = Jan)
+console.log(date.getDate());       // e.g., 28
+console.log(date.getDay());        // e.g., 1 (Monday, 0 = Sunday)
+console.log(date.getHours());      // Local hours
+console.log(date.getMinutes());
+console.log(date.getSeconds());
+console.log(date.getMilliseconds());
+
+
+const now = new Date();
+console.log(now.toDateString());   // "Mon Apr 28 2025"
+console.log(now.toTimeString());   // "15:49:12 GMT+0530 (India Standard Time)"
+console.log(now.toISOString());    // "2025-04-28T10:19:12.123Z"
+console.log(now.toLocaleString()); // "4/28/2025, 3:49:12 PM"
+
+
+const d = new Date();
+d.setFullYear(2024);
+d.setMonth(11);        // December
+d.setDate(25);         // 25th
+d.setHours(10);
+d.setMinutes(30);
+console.log(d);

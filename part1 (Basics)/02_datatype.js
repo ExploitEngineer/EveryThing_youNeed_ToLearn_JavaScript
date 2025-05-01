@@ -6,12 +6,9 @@ String
 Number
 Boolean
 Bigint
-
 Undefined
 null
-
 Object
-
 Symbol
 
 */
