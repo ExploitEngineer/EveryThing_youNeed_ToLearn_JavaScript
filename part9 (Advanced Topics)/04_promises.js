@@ -19,7 +19,7 @@ fetchData()
 const resolveBtn = document.getElementById("resolve-btn");
 const rejectBtn = document.getElementById("reject-btn");
 
-const promise = new Promise((resolve, reject) => {
+const promise1 = new Promise((resolve, reject) => {
     resolveBtn.addEventListener('click', () => {
         resolve('Promise Resolve');
     })
@@ -28,13 +28,13 @@ const promise = new Promise((resolve, reject) => {
     })
 });
 
-promise.then((data) => {
+promise1.then((data) => {
     console.log(data);
 })
-promise.catch((error) => {
+promise1.catch((error) => {
     console.log(error);
 })
-promise.finally(() => {
+promise1.finally(() => {
     console.log('Finally');
 })
 
@@ -78,7 +78,7 @@ p.then(() => {
 })
 
 
-// Best way to handle api using promises 
+// Best way to handle api using promises
 function fetchData(url) {
     return new Promise((resolve, reject) => {
         fetch(url)
@@ -96,23 +96,22 @@ fetchData("https://fakestoreapi.com/products")
 
 
 
-// NOTE: Promises Quizes 
+// NOTE: Promises Quizes
 
-// INFO: First Quiz 
-let promise = new Promise((resolve, reject) => {
+// INFO: First Quiz
+let promise2 = new Promise((resolve, reject) => {
     resolve("Success!");
 });
 
-promise.then((result) => {
+promise2.then((result) => {
     console.log(result);
 }) // Answer : Success!
 
 
-// INFO: Second Quiz 
-let promise = new Promise((resolve, reject) => {
+// INFO: Second Quiz
+let promise3 = new Promise((resolve, reject) => {
     reject("Something went wrong");
 });
-promise.catch((error) => {
+promise3.catch((error) => {
     console.log(error);
 }) // Answer : Something went wrong
-
