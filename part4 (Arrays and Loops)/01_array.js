@@ -4,7 +4,7 @@ const cars = ["Saab", "Volvo", "BWN"];
 const newCars = [];
 newCars[0] = "Saab";
 newCars[1] = "Volvo";
-newCars[2] = "BWN";
+newCars[2] = "BWW";
 console.log(newCars);
 
 // Using the JavaScript keyword new
