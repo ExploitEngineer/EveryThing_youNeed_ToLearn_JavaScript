@@ -21,11 +21,13 @@ for (let i = 0; i < 100; i++) {
     }
 }
 
-
+// What is the difference between for & while loop ?
+// for loop: when we know how many times we have to itereate
+// while loop: when we don't know how many times we have to iterate 
 
 // NOTE: Quizses for (for loops)
 
-// INFO: First Quiz 
+// INFO: First Quiz
 for (let i = 1; i <= 3; i++) {
     console.log(i);
 } // Answer : 1 2 3
@@ -37,21 +39,21 @@ for (let i = 5; i > 0; i--) {
 } // Answer : 5 4 3 2 1
 
 
-// INFO: Third Quiz 
+// INFO: Third Quiz
 for (let i = 1; i <= 10; i += 2) {
     console.log(i);
 } // Answer : 1 3 5 7 9
 
 
-// INFO: Fourth Quiz 
+// INFO: Fourth Quiz
 for (let i = 1; i <= 5; i++) {
     if (i === 3) break;
     console.log(i);
 } // Answer : 1 2
 
 
-// INFO: Fifth Quiz 
+// INFO: Fifth Quiz
 for (let i = 1; i <= 5; i++) {
-    if (i === 3) continue; 
+    if (i === 3) continue;
     console.log(i);
 } // Answer : 1 2 3 4 5
