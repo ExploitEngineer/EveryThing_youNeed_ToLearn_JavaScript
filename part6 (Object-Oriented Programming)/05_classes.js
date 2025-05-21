@@ -57,16 +57,36 @@ car.details(); // Supra - 2020
 
 /*
 🔹 4. Instance Properties & Methods
-    Instance properties are attached to (this) inside constructor.
-    Instance methods are added to the prototype, not copied per instance.
+In JavaScript classes, when you create an object using new, you get an instance of that class. The values and functions (methods) that belong to this instance are called instance properties and instance methods.
 */
-const car1 = new Car("Toyota", 2022);
-console.log(car1.model); // Toyota
-car1.details(); // Toyota - 2022
+
+// ✅ Instance Properties: Declared usually inside the constructor function using this.
+class User {
+  constructor(name) {
+    this.name = name; // instance property
+  }
+}
+
+// ✅ Instance Methods: These are functions defined in the class body and are available to all instances via the prototype.
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    console.log(`Hi, I'm ${this.name}`);
+  }
+}
+
+const user1 = new User("Alice");
+user1.greet(); // "Hi, I'm Alice"
 
 /*
 🔹 5. Inheritance in JavaScript (extends, super)
-✅ Basic Inheritance:
+✅ extends
+Used to create a class that inherits from another class.
+✅ super()
+Used to call the parent class’s constructor and access its methods.
 */
 class Animal {
   constructor(name) {
@@ -74,14 +94,13 @@ class Animal {
   }
 
   speak() {
-    console.log(`${this.name} makes a noise.`);
+    console.log(`${this.name} makes a sound.`);
   }
 }
 
 class Dog extends Animal {
-  constructor(name, breed) {
-    super(name); // calls the parent constructor
-    this.breed = breed;
+  constructor(name) {
+    super(name); // Calls the parent constructor
   }
 
   speak() {
@@ -89,8 +108,8 @@ class Dog extends Animal {
   }
 }
 
-const d = new Dog("Rex", "Labrador");
-d.speak(); // Rex barks.
+const dog = new Dog("Buddy");
+dog.speak(); // "Buddy barks."
 
 /*
 🔹 6. Method Overriding
@@ -107,39 +126,49 @@ class Child extends Parent {
     console.log("Hello from child");
   }
 }
+const newChild = new Child();
+newChild.sayHello(); // Hello from child
+// The Child class overrides the Parent method. If the method exists in both, the child version is used.
 
 /*
 🔹 7. Static Methods
-Static methods are called on the class itself, not on instances.
+Called on the class itself, not on instances.
+Often used for utility/helper functions.
 */
-class MathUtils {
-  static square(x) {
-    return x * x;
+class MathHelper {
+  static add(a, b) {
+    return a + b;
   }
 }
 
-console.log(MathUtils.square(4)); // 16
+console.log(MathHelper.add(3, 4)); // 7
+// You can’t do new MathHelper().add() — that would throw an error.
 
 /*
 🔹 8. Private Fields and Methods (Truly Private)
-Introduced in ES2022, private fields start with #. They cannot be accessed outside the class.
+Use # to declare private fields. These cannot be accessed or modified outside the class.
 */
-class Counter {
-  #count = 0;
+class User {
+  #password;
 
-  increment() {
-    this.#count++;
-    console.log(this.#count);
+  constructor(name, password) {
+    this.name = name;
+    this.#password = password;
+  }
+
+  checkPassword(pw) {
+    return pw === this.#password;
   }
 }
 
-const c = new Counter();
-c.increment(); // 1
-// c.#count; // ❌ Error: Private field '#count' must be declared
+const newU = new User("Alice", "secret");
+console.log(newU.#password); // ❌ Syntax Error
+console.log(newU.checkPassword("secret")); // ✅ true
 
 /*
 🔹 9. Getters and Setters
-Allow controlled access to properties.
+getters => access properties
+setters => change (mutate) them
 */
 class User {
   constructor(name) {
@@ -160,14 +189,31 @@ console.log(u.name); // ALICE
 u.name = "  Bob  ";
 console.log(u.name); // BOB
 
+const user = {
+  firstName: "Abdul",
+  lastName: "Rafay",
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  set fullName(value) {
+    const parts = value.split(" ");
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  },
+};
+
+user.fullName = "John Smith";
+console.log(person);
+
 /*
 🔹 10. instanceof Operator
+what is instace: When you create an object using new, like new User(), that object is an instance of the class.
 Used to check if an object is an instance of a class or constructor.
 */
 class A {}
 class B extends A {}
 
 let b = new B();
-console.log(b instanceof B); // true
-console.log(b instanceof A); // true
-console.log(b instanceof Object); // true
+console.log(b instanceof B); // true — b is instance of B
+console.log(b instanceof A); // true — B extends A
+console.log(b instanceof Object); // true — All classes inherit from Object
