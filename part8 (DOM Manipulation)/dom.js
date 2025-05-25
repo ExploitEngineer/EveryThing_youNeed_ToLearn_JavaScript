@@ -1,198 +1,122 @@
 /*
-# DOM (Document Object Model) in JavaScript - Full In-Depth Explanation
-
----
-
-## What is the DOM?
-
-The Document Object Model (DOM) is a **programming interface** provided by the browser that represents the structure of a webpage. It converts the HTML document into a **tree of JavaScript objects** so you can manipulate content, structure, and style dynamically.
-
-The DOM represents:
-
-* Each **HTML element** as a **node object**.
-* The whole document as a `document` object.
-
----
-
-## DOM Tree Structure
-
-* **Document**: The root node of the document.
-* **Element**: Each tag becomes an element node.
-* **Text**: Inside each tag, text is also a node.
-* **Attributes**: HTML attributes (e.g., class, id) are part of element nodes.
-
-It creates a **tree-like structure** of nested elements.
-
----
-
-## Element Selection Methods
-
-### 1. `getElementById()` - Selects by unique ID.
-
-### 2. `getElementsByClassName()` - Selects by class name (returns a live HTMLCollection).
-
-### 3. `getElementsByTagName()` - Selects by tag name (live HTMLCollection).
-
-### 4. `querySelector()` - Selects the first matching CSS selector.
-
-### 5. `querySelectorAll()` - Selects all matching CSS selectors (NodeList).
-
----
-
-## Reading and Changing Content
-
-### `textContent`
-
-* Returns the text content of an element and all its children.
-* Ignores CSS styles (hidden or shown).
-* Best for reading/writing raw text.
-
-### `innerText`
-
-* Similar to `textContent` but respects CSS styling.
-* Only shows visible text.
-* Can trigger reflow and repaint (performance impact).
-
-### `innerHTML`
-
-* Returns the HTML content as a string.
-* Can be used to insert HTML markup (risky for XSS).
-
-### `outerHTML`
-
-* Returns the HTML of the element **including the element itself**.
-* Can replace the entire element.
-
-### `nodeValue`
-
-* Works on text nodes, not commonly used directly on elements.
-
----
-
-## Attributes in DOM
-
-### Accessing Attributes
-
-* `getAttribute('attributeName')` – Reads attribute value.
-* `setAttribute('attributeName', value)` – Sets attribute.
-* `removeAttribute('attributeName')` – Removes attribute.
-* `hasAttribute('attributeName')` – Checks if attribute exists.
-
-### Standard Attributes
-
-* `id`, `class`, `href`, `src`, `alt`, `type`, `value`, etc.
-
-### Custom Data Attributes (data-\*)
-
-* Accessible using the `dataset` property.
-* `element.dataset.key`
-
----
-
-## Working with Classes
-
-### `className`
-
-* Directly gets/sets the `class` attribute as a string.
-
-### `classList`
-
-* Provides methods to work with classes:
-
-  * `add()`
-  * `remove()`
-  * `toggle()`
-  * `contains()`
-  * `replace()`
-
----
-
-## Styling Elements
-
-### `element.style`
-
-* Inline styles only.
-* Access and change individual CSS properties.
-
-### Best Practice
-
-* Prefer `classList` manipulation to apply CSS classes for multiple style changes.
-
----
-
-## DOM Traversal (Navigating the DOM)
-
-### Parent/Child
-
-* `parentNode`
-* `childNodes` (includes text nodes)
-* `children` (only elements)
-* `firstChild`, `lastChild`
-* `firstElementChild`, `lastElementChild`
-
-### Siblings
-
-* `nextSibling`, `previousSibling` (includes text nodes)
-* `nextElementSibling`, `previousElementSibling`
-
----
-
-## Creating and Modifying Elements
-
-### Creating Elements
-
-* `document.createElement('tagName')`
-* `document.createTextNode('text')`
-
-### Appending Elements
-
-* `parent.appendChild(child)`
-* `parent.insertBefore(newEl, referenceEl)`
-* `parent.append()` / `prepend()`
-
-### Removing/Replacing Elements
-
-* `element.remove()`
-* `parent.removeChild(child)`
-* `parent.replaceChild(newChild, oldChild)`
-
----
-
-## DOM Events (Brief Overview)
-
-* `addEventListener('eventType', callback)`
-* Mouse Events: `click`, `dblclick`, `mouseover`, `mouseout`, `mouseenter`, `mouseleave`
-* Keyboard Events: `keydown`, `keyup`, `keypress`
-* Form Events: `submit`, `change`, `input`, `focus`, `blur`
-
----
-
-## DOMContentLoaded vs window\.onload
-
-* `DOMContentLoaded`: Triggers when the DOM is fully parsed (recommended).
-* `window.onload`: Triggers after all content, including images, is fully loaded.
-
----
-
-## Additional Advanced Concepts
-
-### `documentFragment`
-
-* A lightweight container to batch DOM changes for performance.
-
-### `cloneNode()`
-
-* Clones a DOM node. Use `cloneNode(true)` for deep clone.
-
-### `isEqualNode()` / `isSameNode()`
-
-* Compare two nodes for structural and value equality.
-
-### Shadow DOM
-
-* Encapsulation method for components (used in Web Components).
-
----
-
-Let me know if you'd like detailed examples of any of these or want to dive into event delegation, mutation observers, or Shadow DOM next.
+1. What is DOM?
+Tree structure of the HTML page
+JavaScript can read/manipulate it
+Starts with window -> document -> html -> head/body -> elements
+*/
+
+// 2. Window Object (Global Scope)
+window.alert("Hi!");
+window.location.href; // Current URL
+window.innerWidth; // Width of viewport
+window.setTimeout(fn, 1000); // Call function later
+console.log(window.document); // Whole DOM
+
+// 3. Document Object
+document.title = "New Page";
+console.log(document.body);
+document.body.style.background = "lightblue";
+document.URL;
+document.querySelector("h1").innerText;
+
+// 4. Selecting Elements (5 Key Methods)
+document.getElementById("myId");
+document.getElementsByClassName("card");
+document.getElementsByTagName("section");
+document.querySelector(".hero");
+document.querySelectorAll("ul li");
+
+// 5. Styling Elements
+el.style.backgroundColor = "black";
+el.style.color = "white";
+el.style.fontSize = "24px";
+el.style.padding = "10px";
+el.style.border = "1px solid #ccc";
+
+// 6. Content Change (Text, HTML)
+el.innerText = "New text";
+el.textContent = "Hello World";
+el.innerHTML = "<strong>Bold</strong>";
+
+// 7. Attributes (Set/Get/Remove/Has)
+el.setAttribute("href", "https://google.com");
+let val = el.getAttribute("class");
+el.removeAttribute("disabled");
+let has = el.hasAttribute("title");
+el.setAttribute("data-user", "john123");
+
+// 8. ClassList (CSS Classes)
+el.classList.add("active");
+el.classList.remove("hidden");
+el.classList.toggle("open");
+el.classList.contains("selected"); // true/false
+el.classList.replace("old", "new");
+
+// 9. Events (Click, Hover, Input, Submit, etc.)
+el.addEventListener("click", () => alert("Clicked!"));
+el.addEventListener("mouseover", () => console.log("Hovered!"));
+input.addEventListener("input", (e) => console.log(e.target.value));
+form.addEventListener("submit", (e) => e.preventDefault());
+window.addEventListener("scroll", () => console.log("scrolling"));
+
+// 10. Creating & Appending Elements
+let p = document.createElement("p");
+p.innerText = "New paragraph";
+document.body.appendChild(p);
+let btn = document.createElement("button");
+btn.setAttribute("class", "btn");
+btn.textContent = "Click Me";
+document.querySelector("#container").appendChild(btn);
+
+// 11. Removing Elements
+el.remove();
+parent.removeChild(child);
+container.innerHTML = ""; // clear all
+
+// 12. NodeList vs HTMLCollection
+let nodeList = document.querySelectorAll("li");
+nodeList.forEach((el) => console.log(el));
+let htmlCollection = document.getElementsByClassName("box");
+Array.from(htmlCollection).forEach((el) => console.log(el));
+
+// 13. Forms & Input Fields
+let input = document.querySelector("#name");
+input.value = "John"; // Set value
+input.getAttribute("placeholder");
+input.setAttribute("placeholder", "Enter name");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(input.value);
+});
+
+// 14. Traversing DOM (Parent, Children, Siblings)
+el.parentElement;
+el.children; // HTMLCollection
+el.firstElementChild;
+el.lastElementChild;
+el.nextElementSibling;
+el.previousElementSibling;
+
+// 15. Cloning Elements
+let copy = el.cloneNode(true); // true = deep clone
+document.body.appendChild(copy);
+
+// 16. Modifying Classes Based on Condition
+if (!el.classList.contains("active")) {
+  el.classList.add("active");
+} else {
+  el.classList.remove("active");
+}
+// 17. Setting Styles Dynamically
+function toggleTheme() {
+  let body = document.body;
+  body.classList.toggle("dark-mode");
+}
+/*
+18. Useful Real-world Examples
+Toggle mobile menu
+Validate form input
+Show/hide password
+Change theme (dark/light)
+Load content dynamically with .innerHTML
 */
