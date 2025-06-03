@@ -30,7 +30,7 @@ getPosts();
 // 2. Fetch with async/await
 async function getData() {
     try {
-        const response = await fetch9("https://jsonplaceholder.typicode.com/posts");
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts");
         const data = await response.json();
         console.log("Data inside async/await:", data);
         return data; // this is how we return it to use outside
