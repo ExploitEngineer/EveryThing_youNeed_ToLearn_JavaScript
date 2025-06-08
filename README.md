@@ -1,6 +1,6 @@
 # 📜 JavaScript Mastery Course
 
-Welcome to the **Everything You Need to Learn JavaScript** repository! 🚀 This comprehensive course covers **everything** you need to master JavaScript, from the basics to advanced concepts. Whether you're a beginner or an experienced developer looking to polish your skills, this course is designed to be your **one-stop solution** for JavaScript expertise.
+Welcome to the **Everything You Need to Learn JavaScript** repository 🚀 This comprehensive course covers **everything** you need to master JavaScript, from the basics to advanced concepts. Whether you're a beginner or an experienced developer looking to polish your skills, this course is designed to be your **one-stop solution** for JavaScript expertise.
 
 ## 📂 Course Structure
 
