@@ -1,3 +1,5 @@
+// In javascript we do not need to specify type of the varialbe because if is dynamically used by javascript engine. We can use var data type. It can hold any type of data like String, Number, Boolen etc.
+
 console.log("hello");
 // console.log("cai");
 /*
