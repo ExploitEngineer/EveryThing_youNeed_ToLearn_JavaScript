@@ -1,29 +1,50 @@
-// In javascript we do not need to specify type of the varialbe because if is dynamically used by javascript engine. We can use var data type. It can hold any type of data like String, Number, Boolen etc.
+// datatypes.js
 
-console.log("hello");
-// console.log("cai");
 /*
+JavaScript is dynamically typed, so variables can hold any type of data without explicit type declaration.
 
-String
-Number
-Boolean
-Bigint
-Undefined
-null
-Object
-Symbol
+Common data types in JavaScript:
 
+1. String      - Text wrapped in quotes
+2. Number      - Numeric values (integers and floats)
+3. Boolean     - true or false
+4. BigInt      - For very large integers
+5. Undefined   - A variable declared but not assigned a value
+6. Null        - Represents intentional absence of any object value
+7. Object      - Collections of key-value pairs, arrays, functions, etc.
+8. Symbol      - Unique and immutable primitive values
 */
 
-// var score = 102;
+// Examples of different data types:
 
-let score = 102;
+// String
 let name = "whoami";
-let isLoggedin = false;
+console.log(name); // whoami
 
-// object
+// Number
+let score = 102;
+console.log(score); // 102
+
+// Boolean
+let isLoggedIn = false;
+console.log(isLoggedIn); // false
+
+// Object - Array
 let teaTypes = ["lemon tea", "orange tea", "oolong tea"];
-let user = { firstname: "whoami", lastname: "dsnake0" }
+console.log(teaTypes); // ["lemon tea", "orange tea", "oolong tea"]
 
+// Object - Plain Object
+let user = { firstName: "whoami", lastName: "dsnake0" };
+console.log(user); // { firstName: "whoami", lastName: "dsnake0" }
+
+// Assigning variable values
 let getScore = score;
-console.log(getScore)
+console.log(getScore); // 102
+
+// Undefined example
+let something;
+console.log(something); // undefined
+
+// Null example
+let emptyValue = null;
+console.log(emptyValue); // null
