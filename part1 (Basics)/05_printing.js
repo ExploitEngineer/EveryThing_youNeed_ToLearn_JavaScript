@@ -18,6 +18,10 @@ console.table({ city: "Islamabad" });
 //    - Prints warning messages, usually highlighted in the console.
 console.warn({ city: "newCity" });
 
+// 5. console.error()
+//    - Prints error messages, usually highlighted in the console
+console.error("The error message");
+
 /*
 Note:
 - In browsers, `console.log()`, `console.warn()`, and `console.table()` are commonly used.
