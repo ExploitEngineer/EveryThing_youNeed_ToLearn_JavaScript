@@ -18,7 +18,7 @@ console.log(message[4]); // Output: o
 // NOTE: The main property of strings is 'length' which returns the number of characters in the string.
 console.log(message.length); // Output: 11
 
-// Methods without arguments
+// INFO: Methods without arguments
 
 // Convert to uppercase
 console.log(message.toUpperCase()); // Output: "HELLO WORLD"
@@ -32,7 +32,7 @@ console.log(newMessage.trim()); // Output: "hi this is me ."
 console.log(newMessage.trimStart()); // Removes only the starting spaces
 console.log(newMessage.trimEnd()); // Removes only the ending spaces
 
-// Methods with arguments
+// INFO: Methods with arguments
 
 // Check if string includes substring
 console.log(message.includes("Hello")); // Output: true
