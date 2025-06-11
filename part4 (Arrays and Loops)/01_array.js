@@ -40,6 +40,7 @@ console.log(fruitsCollection);
 
 // how to delete a value from array
 console.log(fruitsCollection.pop());
+console.log(fruitsCollection.shift());
 console.log(fruitsCollection);
 
 // Map
@@ -62,6 +63,9 @@ numbers.forEach((num) => console.log(num));
 const found = numbers.find((num) => num > 1);
 console.log(found);
 
+const numberIndex = numbers.findIndex((num) => num > 2);
+console.log(numberIndex);
+
 // every / some
 console.log(numbers.every((num) => num > 0)); // true
 console.log(numbers.some((num) => num > 0)); // true
@@ -74,7 +78,7 @@ console.log(combined); // [1, 2, 3, 4, 5];
 // slice
 console.log(numbers.slice(0, 2)); // [1, 2]
 
-// splce
+// splice
 numbers.splice(1, 1, 10);
 console.log(numbers); // [1, 10, 3]
 
@@ -117,65 +121,23 @@ console.log(name); // Alice
 console.log(hobby1); // Reading
 console.log(hobby2); // Gaming
 
-// INFO: Advanced Array Things
 
-// 🔥 Main Points About Each Method
+// NOTE: What is an array-like object ? 
+/*
+An array-like object is a object that:-
+1. Has a length property 
+2. Has values stored at numeric indices like 0, 1, 2, etc.
+3. But it's not a real array (doesn't have array methods like .map(), .forEach())
+*/
 
-const arrayMethods = [
-  {
-    Method: "Array.from()",
-    WhatItDoes: "Converts array-like objects or iterables to real arrays.",
-    WhyItsUseful: "Allows use of array methods (.map(), .filter(), etc.).",
-  },
-  {
-    Method: "Array.of()",
-    WhatItDoes: "Creates an array from arguments.",
-    WhyItsUseful: "Unlike Array(), it treats numbers as values, not length.",
-  },
-  {
-    Method: "Array.isArray()",
-    WhatItDoes: "Checks if a value is a real array.",
-    WhyItsUseful: "Helps avoid errors when working with array-like objects.",
-  },
-  {
-    Method: "Array.entries()",
-    WhatItDoes: "Returns key-value pairs of an array.",
-    WhyItsUseful: "Useful for iterating with index & value.",
-  },
-  {
-    Method: "Array.keys()",
-    WhatItDoes: "Returns an iterator of indices (keys).",
-    WhyItsUseful: "Helpful when you need to work with indices only.",
-  },
-  {
-    Method: "Array.values()",
-    WhatItDoes: "Returns an iterator of values.",
-    WhyItsUseful: "Useful for looping through elements.",
-  },
-  {
-    Method: "Array.fill()",
-    WhatItDoes: "Fills an array with a specific value.",
-    WhyItsUseful: "Useful for creating arrays with default values.",
-  },
-  {
-    Method: "Array.copyWithin()",
-    WhatItDoes: "Copies part of an array to another position.",
-    WhyItsUseful: "Useful for reordering elements in-place.",
-  },
-];
 
-// Displaying each method information
-arrayMethods.forEach((method) => {
-  console.log(`Method: ${method.Method}`);
-  console.log(`What It Does: ${method.WhatItDoes}`);
-  console.log(`Why It's Useful: ${method.WhyItsUseful}`);
-  console.log("----------------------------------");
-});
+// INFO: Advanced Array Utility Functions
 
 /*
-✅ Array.from()
+Array.from()
 Converts array-like objects or iterables to real arrays.
 */
+
 // Converting a string (array-like object) to an array
 const str = "Hello";
 const arrFromStr = Array.from(str);
@@ -184,10 +146,22 @@ console.log(arrFromStr); // ['H', 'e', 'l', 'l', 'o']
 // Creating an array from a NodeList (array-like object)
 const divs = document.querySelectorAll("div");
 const divArray = Array.from(divs);
-console.log(divArray); // Now you can use array methods like .map(), .filter() on it.
+console.log(divArray); 
+
+// Convert a Set to an Array and Double the Numbers 
+const settings = {
+  multiplier: 2,
+};
+
+const numbers = new Set([1, 2, 3, 4]);
+
+const doubledArray = Array.from(numbers, function (value) {
+  return value * this.multiplier;
+}, settings);
+console.log(doubledArray); // [2, 4, 6, 8]
 
 /*
-✅ Array.of()
+Array.of()
 Creates arrays from arguments.
 */
 const arr1 = Array.of(5); // [5] - A single element array.
@@ -199,7 +173,7 @@ console.log(Array(5)); // Creates an array with 5 empty slots (not useful).
 console.log(Array(1, 2, 3)); // Same as Array.of(1, 2, 3)
 
 /*
-✅ Array.isArray()
+Array.isArray()
 Checks if a value is a real array.
 */
 console.log(Array.isArray([1, 2, 3])); // true
@@ -211,22 +185,23 @@ const divs1 = document.querySelectorAll("div");
 console.log(Array.isArray(divs1)); // false
 
 /*
-✅ Array.entries()
-Returns an iterator of index-value pairs.
+Array.entries()
+is a method is javascript that returns a new array iterator object containing key/value pairs of each index in the array. 
+Each pair is returned in the format [index, value].
 */
-const arr3 = ["a", "b", "c"];
-const entries = arr3.entries();
+const colors = ["red", "green", "blue"];
+const iterator = colors.entries();
 
-for (let [index, value] of entries) {
+for (const [index, value] of iterator) {
   console.log(index, value);
 }
-// Output:
-// 0 'a'
-// 1 'b'
-// 2 'c'
+
+// we can also use .next() method manually 
+console.log(iterator.next()); // { value: [ 0, "red" ], done: false }
+console.log(iterator.next().value; // [ 0, "red" ]
 
 /*
-✅ Array.keys()
+Array.keys()
 Returns an iterator of indices (keys).
 */
 const arr4 = ["x", "y", "z"];
@@ -241,7 +216,7 @@ for (let key of keys) {
 // 2
 
 /*
-✅ Array.values()
+Array.values()
 Returns an iterator of values.
 */
 const arr5 = [10, 20, 30];
@@ -256,7 +231,7 @@ for (let value of values) {
 // 30
 
 /*
-✅ Array.fill()
+Array.fill()
 Fills an array with a specific value.
 */
 const arr6 = new Array(5).fill(0); // Creates an array of length 5 and fills it with 0.
@@ -264,20 +239,19 @@ console.log(arr6); // [0, 0, 0, 0, 0]
 
 // Partially filling an array
 const arr7 = [1, 2, 3, 4, 5];
-arr7.fill(9, 1, 3);
+arr7.fill(9, 1, 3); // value, startIndex, endIndex
 console.log(arr7); // [1, 9, 9, 4, 5]
 
 /*
-✅ Array.copyWithin()
-Copies part of an array to another position.
+Array.copyWithin()
+Copies part of the array to another location in the same array, without changing its length.
 */
 const arr8 = [10, 20, 30, 40, 50];
-arr8.copyWithin(0, 3);
+arr8.copyWithin(0, 3); // target, startIndex
 console.log(arr8); // [40, 50, 30, 40, 50]
 
-// Copying elements within the array (target, start, end)
 const arr9 = [1, 2, 3, 4, 5];
-arr9.copyWithin(1, 3, 5);
+arr9.copyWithin(1, 3, 5); // target, startIndex, endIndex
 console.log(arr9); // [1, 4, 5, 4, 5]
 
 // NOTE: Quizzes
@@ -330,4 +304,4 @@ console.log(arr14); // [1, 2, 0, 0, 5]
 // INFO: Array.copyWithin()
 const arr15 = [1, 2, 3, 4, 5];
 arr15.copyWithin(2, 0, 2);
-console.log(arr15); // [3, 4, 5, 4, 5]
+console.log(arr15); // [1, 2, 1, 2, 5]
