@@ -85,7 +85,7 @@ const newarr13 = arr13.slice(1, 3); // [2, 3]
 const newarr20 = arr13.slice(1); // [2, 3, 4, 5]
 console.log(newarr13);
 
-// Array splice Method splice(index, howmany, "new value", Delete) changes in the exesting array
+// Array splice Method splice(startIndex, deleteCount, "new value", item1, item2) changes in the exesting array
 const arr14 = [1, 2, 3, 4, 5];
 arr14.splice(2, 0, 6, 7);
 arr14.splice(2, 1, 8, 9);
@@ -106,7 +106,6 @@ const prices = [4, 8, 9, 10, 12];
 const newPrices = prices.map((price, i, arr) => {
     return price * 0.5;
 })
-
 console.log(newPrices);
 
 
@@ -223,15 +222,3 @@ const findProducts = myProducts.find((elem) => {
 })
 
 console.log(findProducts);
-
-
-
-// NOTE: Final summary Table for (find, filter, reduce, forEach, map)
-/* 
-Method        Creates a New Array?        Returns a Single Value?                Original Array Modified?
-.map()        ✅ Yes	                  ✅ Yes (returns a new array)	         ❌ No
-.filter()     ✅ Yes	                  ✅ Yes (returns a new array)           ❌ No
-.reduce()     ❌ No	                      ✅ Yes (returns a single value)	     ❌ No
-.find()	      ❌ No	                      ✅ Yes (returns a single element)	     ❌ No
-.forEach()    ❌ No	                      ❌ No (returns undefined)	             ✅ Yes (can modify original array)
-*/
