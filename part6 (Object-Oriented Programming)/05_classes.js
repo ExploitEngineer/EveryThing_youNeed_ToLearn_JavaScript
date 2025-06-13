@@ -1,7 +1,8 @@
 /*
-🔹 1. What Are Classes in JavaScript?
-JavaScript classes are syntactic sugar over the existing prototype-based inheritance. Classes make it easier to structure code using constructors, methods, and inheritance, following familiar OOP patterns like in Java, C++, etc.
+INFO: What Are Classes in JavaScript ?
+A class in Javascript is a way to create reusable blueprints for creating objects that share the same structure (properties) and behaviour (methods). It makes it easier to create & manage multiple similar objects.
 */
+
 class Person {
   constructor(name) {
     this.age = name;
@@ -20,8 +21,8 @@ class className {
     // setup
   }
 
-  method1() {}
-  method2() {}
+  method1() { }
+  method2() { }
 }
 
 class Animal {
@@ -210,8 +211,8 @@ console.log(person);
 what is instace: When you create an object using new, like new User(), that object is an instance of the class.
 Used to check if an object is an instance of a class or constructor.
 */
-class A {}
-class B extends A {}
+class A { }
+class B extends A { }
 
 let b = new B();
 console.log(b instanceof B); // true — b is instance of B
