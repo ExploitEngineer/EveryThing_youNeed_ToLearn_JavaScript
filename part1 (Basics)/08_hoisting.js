@@ -1,10 +1,6 @@
-// hoisting.js
-
-// INFO: Hoisting in JavaScript
-
 /*
-Hoisting is a JavaScript mechanism where variables and function declarations
-are moved to the top of their scope (memory phase) before code execution.
+ INFO: Hoisting in JavaScript
+Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope (memory phase) before code execution.
 
 Important:
 - Only **declarations** are hoisted, not **initializations**.
@@ -16,7 +12,7 @@ Important:
 // Function call before it's defined – this works because function declarations are hoisted
 getName(); // Output: "JavaScript"
 
-// Accessing a 'var' variable before declaration – it's hoisted with undefined
+// Accessing a 'var' variable before declaration – it's initialized with undefined
 console.log(x); // Output: undefined
 
 // Accessing the function by name – shows the function definition
