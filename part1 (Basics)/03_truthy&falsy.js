@@ -1,8 +1,8 @@
 /* INFO: What are Truthy and Falsy Values?
 In JavaScript, every value is either "truthy" or "falsy" when evaluated in a Boolean context (like inside an if condition).
 
-- Falsy values** are those that are considered false when converted to a Boolean.
-- Truthy values** are all other values that are considered true.
+- Falsy values are those that are considered false when converted to a Boolean.
+- Truthy values are all other values that are considered true.
 */
 
 /*
