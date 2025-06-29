@@ -71,6 +71,7 @@ Converts to number, if possbile.
 */
 Number("123"); // 123
 Number("abc"); // NaN
+Number("10a"); // NaN
 Number(true); // 1
 Number(false); // 0
 
@@ -103,5 +104,5 @@ INFO: Infinity, NaN, undefined
 These are global values, not Functions
 */
 console.log(Infinity); // Infinity
-console.log(NaN);      // NaN
+console.log(NaN); // NaN
 console.log(undefined); // undefined
