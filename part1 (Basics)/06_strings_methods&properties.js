@@ -1,8 +1,6 @@
-// strings_methods&properties.js
-
-// INFO: String Methods & Properties in JavaScript
-
 /*
+INFO: String Methods & Properties in JavaScript
+
 Strings in JavaScript are sequences of characters and are indexed starting from 0.
 This means you can access individual characters using bracket notation.
 
@@ -14,8 +12,10 @@ Example:
 let message = "Hello World";
 console.log(message[4]); // Output: o
 
-// Properties
-// NOTE: The main property of strings is 'length' which returns the number of characters in the string.
+/*
+NOTE: Properties
+The main property of strings is 'length' which returns the number of characters in the string.
+*/
 console.log(message.length); // Output: 11
 
 // INFO: Methods without arguments
