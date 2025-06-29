@@ -1,35 +1,49 @@
-// Using let (recommended for variables that can change)
-let age = 20; // Declare and initialize variable
-age = 30; // Update the value
+/*
+INFO: JavaScript Variables:
+- var: old way avoid using var
+- let: variables that can change
+- const: constant values that should not change
+*/
 
-// Using const (for constant values that should not change)
-// NOTE: It's better to use all letters upppercase when using constants
-const PI = 3.14; // Declare and initialize constant
-
-// Using var (old way, avoid if possible)
 // var declarations are function-scoped and can lead to unexpected behavior
 var name = "John";
 
-// Variable scope examples:
+let age = 20; // Declare and initialize variable
+age = 30; // Update the value
 
-// Block scope with let and const
+const PI = 3.14; // Declare and initialize constant
+
+// INFO: Variable scopes:
+
+// GLobal scope: can be accessable anywhere in the code
+var a = 10;
+let b = 20;
+const c = 30;
+
+// Block scope: only var is accessable outside the block
 if (true) {
+  var accessable = "I am accessable";
   let blockScoped = "I exist only inside this block";
   const constantScoped = "Also block-scoped";
-  console.log(blockScoped); // Works here
+  console.log(blockScoped, constantScoped, accessable); // Works here
 }
-// console.log(blockScoped);   // Error: blockScoped is not defined
+// console.log(blockScoped, constantScoped);   // Error
 
-// var is function scoped, not block scoped
-if (true) {
-  var functionScoped = "I exist inside the function or globally";
+// Function scope: only accessable inside the function
+function abc() {
+  var d = 10;
+  let e = 20;
+  const f = 30;
+  console.log(d, e, f);
 }
-console.log(functionScoped); // Works here (if not inside a function)
+console.log(d, e, f); // Error
 
-// Variable naming rules:
-// - Can contain letters, digits, underscores, and dollar signs
-// - Cannot start with a digit
-// - Case sensitive (age and Age are different)
+/*
+INFO: Variable naming rules:
+- Can contain letters, digits, underscores, and dollar signs
+- Cannot start with a digit
+- Case sensitive (age and Age are different)
+*/
 
 // Example of valid variable names:
 let userName;
@@ -39,7 +53,7 @@ let _count;
 // Example of invalid variable name:
 // let 1stName;  // Syntax Error
 
-// Variables declared without let, const, or var become global (avoid this)
+// INFO: Variables declared without let, const, or var become global (avoid this)
 function wrongExample() {
   someVar = 10; // Declares a global variable unintentionally
 }
