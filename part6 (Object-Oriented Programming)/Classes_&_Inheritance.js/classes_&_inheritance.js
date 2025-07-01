@@ -13,7 +13,7 @@ class Person {
   greet() {
     console.log(`Hello, my name is ${this.name}`);
   }
-};
+}
 
 // creating actual people (objects) from the blueprint
 const person1 = new Person("Alice", 25);
@@ -51,7 +51,9 @@ class Developer extends User {
   }
 
   code() {
-    console.log(`${this.name} writes code in ${this.language} & his age is ${this.age}`);
+    console.log(
+      `${this.name} writes code in ${this.language} & his age is ${this.age}`,
+    );
   }
 }
 
@@ -70,7 +72,7 @@ class Car {
 
   constructor(model) {
     this.model = model;
-    Car.count++
+    Car.count++;
   }
 
   static company() {
@@ -88,7 +90,6 @@ const myCar = new Car("BMW");
 console.log(Car.company()); // Toyota
 console.log(Car.getCount()); // 2
 console.log(myCar.company()); // Error: myCar.company is not a function
-
 
 /* INFO: get and set (Getters & Setters)
 Getters and setters in javascript are special methods that allow you to define custom behaviour when accessing or setting object properties.
@@ -150,7 +151,6 @@ console.log(char.age); // Getting age... -> 30
 
 char.age = -5; // Age cannot be negative.
 console.log(char.age); // Getting age... -> 30 (unchanged)
-
 
 // Example of call concepts
 class Gadget {
