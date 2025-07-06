@@ -55,6 +55,13 @@ console.log(user); // { firstName: "whoami", lastName: "dsnake0" }
 let uniqueId = Symbol("id");
 console.log(uniqueId); // Symbol(id)
 
+const id = Symbol("id");
+const person = {
+  name: "Rafay",
+  [id]: 123,
+};
+console.log(person[id]); // 123
+
 // INFO: Type of each DataTypes
 
 console.log(typeof name); // "string"
