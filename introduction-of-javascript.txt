@@ -1,0 +1,11 @@
+1. What is JavaScript ?
+JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and Css. It lets us add interactivity to pages e.g. you might have seen sliders, alerts, click interactions, popups, etc on different websistes - all of that is built using javascript. Apart from being used in the browser, it is also used in other non-browser environments as well such as Node.js for writing server-side code in javascript, Electron for writing Desktop applications, React Native for mobile applications, and so on.
+
+2. History of JavaScript ?
+JavaScript was initially created by Brendan Eich of NetScape and was first announced in a press release by Netscape in 1995. It has a bizarre history or naming; initially, it was named Mocha by the creator, which was later renamed LiveScript, In 1996, about a year after the release, NetScape decided to rename it to JavaScript with hopes of capitalizing on the java community (although JavaScript did not have any relationship with java) and released Netscape 2.0 with the official support of JavaScript.
+
+3. JavaScript Versions
+JavaScript, invented by Brenden Eich, achieved the status of an ECMA standard in 1997 and adopted the official name ECMAScript. This language has evolved through several versions, namely ES1, ES2, ES3, ES5, and the transformative ES6. These updates have played a crucial role in improving and standardizing JavaScript, making it widely used and valuable in the ever-changing field of web development.
+
+4. How to run JavaScript ?
+JavaScript can be run in the browser by including the external script file using the script tag, writing it within the HTML page using the script tag again, running it in the browser console or you can also use REPL.
