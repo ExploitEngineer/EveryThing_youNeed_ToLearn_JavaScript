@@ -35,8 +35,3 @@ Converts a JSON string into a javascript object.
 const jsonStr = '{"name": "Rafay", "age": 25}';
 const parsed = json.parse(jsonStr);
 console.log(parsed.name);
-
-
-
-
-
