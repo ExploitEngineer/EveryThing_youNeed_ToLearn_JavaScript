@@ -11,7 +11,7 @@ const user = {
   name: "Rafay",
   greet() {
     console.log(`Hello, ${this.name}`);
-  }
+  },
 };
 
 const admin = {
@@ -22,6 +22,18 @@ admin.__proto__ = user;
 
 console.log(admin.name); // "Rafay"
 admin.greet(); // Hello, Rafay
+
+// Another Example
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+Person.prototype.gender = "Male";
+
+const person1 = new Person("Elon", "Musk");
+const person2 = new Person("Bill", "Gates");
+
+console.log(person2.gender, person1.gender); // Male, Male
 
 /*
 INFO: Object.getPrototypeOf() and Object.setPrototypeOf()
@@ -44,4 +56,12 @@ When you access a property:
 This is called Prototype Chain.
 */
 
+/*
+INFO: __proto__
+An object property that points to another object (its prototype).
+Used to inherit from another object.
 
+INFO: prototype
+A property of constructor functions (or classes)
+Used to add shared methods/properties to all instances created by new
+*/
